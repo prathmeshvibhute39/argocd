@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-apps
+  name: mygitapp
 spec:
   selector:
     matchLabels:
-      run: my-apps
+      run: mygitapp
   replicas: 2
   template:
     metadata:
       labels:
-        run: my-apps
+        run: mygitapp
     spec:
       containers:
-      - name: my-apps
+      - name: mygitapp
         image: nginx
         ports:
         - containerPort: 80
